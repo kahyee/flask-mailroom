@@ -1,0 +1,12 @@
+{% extends 'base.jinja2' %}
+
+{% block subtitle %}Total Donations{% endblock subtitle %}
+
+{% block content %}
+
+<ul>
+    {% for donor, value in summary.items() %}
+        <li><b>{{ donor }}</b>: {{ value }}</li>
+    {% endfor %}
+</ul>
+{% endblock content %}
